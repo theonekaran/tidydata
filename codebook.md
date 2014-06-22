@@ -7,6 +7,9 @@ source link http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Us
 Data file link:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+Assumption is that the user of the 'run_analysis.R' script will have the data downloaded and extracted. The 'run_analysis.R' file will be outside of the 'UCI HAR Dataset' directory where all the data lies. 
+The final tidy data set will be created inside the 'UCI HAR Dataset' directory under the file name 'tidy_data.txt'.
+
 ##Description of study:
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
@@ -32,10 +35,7 @@ The downloaded dataset includes the following files:
 
 Merging Data: I have merged the sets into one set of rows (Particpants) and columns (Activity, Variable, Value)
 
-Data Sample: I have worked with the data in the first 8 columns as a data sample
+Data used: I have used the first 8 columns: First 2 are Subject Number, Activity type. Last 6 columns are the mean and std deviation of each activity that is required to be extracted in Step 2 above.
 
 ##Final File Output(s) are:
-NewMergedDataTable.txt  : all merged data in text file
-NewMergedDataTable.csv : all merged data in csv file
-TidyDataSet1_mean_std  :  sample data from first 8 columns
-TidyDataSet2_averages:  sample data from first 8 columns
+tidy_data.txt which is the average of the mean and std_dev of each measurement for each activity and each subject.
